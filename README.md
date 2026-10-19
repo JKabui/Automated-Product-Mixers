@@ -8,7 +8,7 @@ Designed and implemented an automated control system for product mixers to upgra
 
 ### PDF Documents
 - [📄 Powder Products Mixer (PDF)](./Powder%20Products%20Mixer.pdf)
-- [📄 Automatic Products Mixer (PDF)](./Automatic%20Products%20Mixer.pdf)
+- [📄 PLC Program (PDF)](./PLC_Program.pdf)
 
 ### Circuit Drawings (.dxf)
 - [1. Power Circuit.dxf](./1.Power%20Circuit.dxf)
