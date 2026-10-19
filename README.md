@@ -6,12 +6,18 @@ Designed and implemented an automated control system for product mixers to upgra
 
 ## Project Files
 
-### PDF Document
+### PDF Documents
 - [📄 Powder Products Mixer (PDF)](./Powder%20Products%20Mixer.pdf)
+- [📄 Automatic Products Mixer (PDF)](./Automatic%20Products%20Mixer.pdf)
 
 ### Circuit Drawings (.dxf)
 - [1. Power Circuit.dxf](./1.Power%20Circuit.dxf)
 - [2. Safety Circuit.dxf](./2.Safety%20Circuit.dxf)
 - [3. PLC Circuit.dxf](./3.PLC%20Circuit.dxf)
 
-> **Note:** `.dxf` files can be opened with AutoCAD, DraftSight, or free online viewers.
+### PLC Program (TIA Portal V19)
+- [⬇️ Full TIA Portal Project (ZIP)](./Automatic%20Products%20Mixers.zip)
+
+> **Note:**  
+> - Download the ZIP file and open it with **TIA Portal V19** (or a compatible version).  
+> - `.dxf` files can be opened with AutoCAD, DraftSight, or free DXF viewers.
