@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated Product Mixers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #f5f7fa;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a5f, #2c5282);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .content {
+      padding: 35px 30px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section h2 {
+      font-size: 1.35rem;
+      color: #1e3a5f;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .description {
+      color: #4a5568;
+      margin-bottom: 25px;
+      font-size: 1.05rem;
+    }
+
+    .file-list {
+      list-style: none;
+    }
+
+    .file-list li {
+      margin-bottom: 12px;
+    }
+
+    .file-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #2d3748;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .file-link:hover {
+      background: #edf2f7;
+      border-color: #2c5282;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .icon {
+      font-size: 1.4rem;
+      width: 28px;
+      text-align: center;
+    }
+
+    .pdf {
+      color: #c53030;
+    }
+
+    .dxf {
+      color: #2b6cb0;
+    }
+
+    .note {
+      background: #ebf8ff;
+      border-left: 4px solid #3182ce;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+      color: #2c5282;
+      margin-top: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #718096;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 30px 20px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .content {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Automated Product Mixers</h1>
+      <p>Automated control system with enhanced safety features</p>
+    </header>
+
+    <div class="content">
+      <div class="section">
+        <p class="description">
+          Designed and implemented an automated control system for product mixers 
+          to upgrade on existing ones. Incorporated new safety features including 
+          safety relays to maximize operators' safety. Automated the mixing process 
+          to enhance efficiency.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>📄 PDF Document</h2>
+        <ul class="file-list">
+          <li>
+            <a class="file-link" href="./Powder%20Products%20Mixer.pdf" target="_blank">
+              <span class="icon pdf">📄</span>
+              Powder Products Mixer.pdf
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>📐 Circuit Drawings (.dxf)</h2>
+        <ul class="file-list">
+          <li>
+            <a class="file-link" href="./1.Power%20Circuit.dxf">
+              <span class="icon dxf">📐</span>
+              1. Power Circuit.dxf
+            </a>
+          </li>
+          <li>
+            <a class="file-link" href="./2.Safety%20Circuit.dxf">
+              <span class="icon dxf">📐</span>
+              2. Safety Circuit.dxf
+            </a>
+          </li>
+          <li>
+            <a class="file-link" href="./3.PLC%20Circuit.dxf">
+              <span class="icon dxf">📐</span>
+              3. PLC Circuit.dxf
+            </a>
+          </li>
+        </ul>
+
+        <div class="note">
+          <strong>Note:</strong> .dxf files can be opened with AutoCAD, DraftSight, 
+          LibreCAD, or free online DXF viewers.
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Designed by JKabui • Automated Control System Project
+    </footer>
+  </div>
+</body>
+</html>
