@@ -4,6 +4,29 @@ Designed and implemented an automated control system for product mixers to upgra
 
 **Live site:** [https://jkabui.github.io/Automated-Product-Mixers/](https://jkabui.github.io/Automated-Product-Mixers/)
 
+## System Description
+
+This project implements an automated control system for an industrial product mixer (agitator) using a Siemens S7-1200 PLC programmed in TIA Portal V19.
+
+**Safety Circuit**  
+A dual-channel safety relay monitors:
+- Dual-channel Emergency Stop button  
+- Dual-channel safety limit switch on the access door  
+- Dual-channel safety limit switch on the top cover  
+
+The safety relay only energizes the `SAFETY_OK` signal when the Emergency Stop is released **and** both the door and top cover are fully closed. This signal is fed as a hardwired input to the PLC. In addition, the motor overload relay status is monitored by the PLC.
+
+**Motor Control Logic**  
+The agitator motor is controlled through two contactors (Forward and Reverse) and a thermal overload relay.  
+
+When the Start button is pressed (and all safety conditions are healthy):
+1. The motor runs in the **forward** direction for 30 seconds  
+2. Stops for 3 seconds  
+3. Runs in the **reverse** direction for 30 seconds  
+4. Stops for 3 seconds  
+
+This forward–pause–reverse–pause cycle repeats continuously until the Stop button is pressed or any safety condition is lost (`SAFETY_OK` drops or the overload relay trips).
+
 ## Project Files
 
 ### PDF Documents
