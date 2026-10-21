@@ -6,7 +6,7 @@ Designed and implemented an automated control system for product mixers to upgra
 
 ## System Description
 
-This project implements an automated control system for an industrial product mixer (agitator) using a Siemens S7-1200 PLC programmed in TIA Portal V19.
+This project implements an automated control system for an industrial product mixer (agitator) using a Siemens S7-1200 PLC programmed in TIA Portal V19. The electrical schematics were designed using EPLAN Electric P8.
 
 **Safety Circuit**  
 A dual-channel safety relay monitors:
