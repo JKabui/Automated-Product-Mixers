@@ -14,7 +14,7 @@
       padding: 20px;
     }
     .container {
-      max-width: 800px;
+      max-width: 820px;
       margin: 40px auto;
       background: white;
       border-radius: 12px;
@@ -38,7 +38,12 @@
       padding-bottom: 8px;
       border-bottom: 2px solid #e2e8f0;
     }
-    .description { color: #4a5568; margin-bottom: 25px; font-size: 1.05rem; }
+    .description { color: #4a5568; margin-bottom: 18px; font-size: 1.05rem; }
+    .description ul {
+      margin: 12px 0 12px 22px;
+      color: #4a5568;
+    }
+    .description li { margin-bottom: 6px; }
     .file-list { list-style: none; }
     .file-list li { margin-bottom: 12px; }
     .file-link {
@@ -96,11 +101,41 @@
 
     <div class="content">
       <div class="section">
+        <h2>System Description</h2>
         <p class="description">
-          Designed and implemented an automated control system for product mixers 
-          to upgrade on existing ones. Incorporated new safety features including 
-          safety relays to maximize operators' safety. Automated the mixing process 
-          to enhance efficiency.
+          This project implements an automated control system for an industrial product mixer (agitator) 
+          using a Siemens S7-1200 PLC programmed in TIA Portal V19.
+        </p>
+
+        <p class="description"><strong>Safety Circuit</strong><br>
+          A dual-channel safety relay monitors:
+        </p>
+        <ul class="description">
+          <li>Dual-channel Emergency Stop button</li>
+          <li>Dual-channel safety limit switch on the access door</li>
+          <li>Dual-channel safety limit switch on the top cover</li>
+        </ul>
+        <p class="description">
+          The safety relay only energizes the <strong>SAFETY_OK</strong> signal when the Emergency Stop is released 
+          <strong>and</strong> both the door and top cover are fully closed. This signal is fed as a hardwired input to the PLC. 
+          In addition, the motor overload relay status is monitored by the PLC.
+        </p>
+
+        <p class="description"><strong>Motor Control Logic</strong><br>
+          The agitator motor is controlled through two contactors (Forward and Reverse) and a thermal overload relay.
+        </p>
+        <p class="description">
+          When the Start button is pressed (and all safety conditions are healthy):
+        </p>
+        <ol class="description" style="margin-left: 22px;">
+          <li>The motor runs in the <strong>forward</strong> direction for 30 seconds</li>
+          <li>Stops for 3 seconds</li>
+          <li>Runs in the <strong>reverse</strong> direction for 30 seconds</li>
+          <li>Stops for 3 seconds</li>
+        </ol>
+        <p class="description">
+          This forward–pause–reverse–pause cycle repeats continuously until the Stop button is pressed 
+          or any safety condition is lost (<strong>SAFETY_OK</strong> drops or the overload relay trips).
         </p>
       </div>
 
