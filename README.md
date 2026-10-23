@@ -14,7 +14,7 @@ A dual-channel safety relay monitors:
 - Dual-channel safety limit switch on the access door  
 - Dual-channel safety limit switch on the top cover  
 
-The safety relay only energizes the `SAFETY_OK` signal when the Emergency Stop is released **and** both the door and top cover are fully closed. This signal is fed as a hardwired input to the PLC. In addition, the motor overload relay status is monitored by the PLC.
+The safety relay only energizes the `SAFETY_OK` signal when the Emergency Stop is released **and** both the door and top cover are fully closed. This signal is fed as a hardwired input to the PLC. The contactors are interlocked in the PLC Program as well as Hardwired interlocks for maximum protection. In addition, the motor overload relay status is monitored by the PLC.
 
 **Motor Control Logic**  
 The agitator motor is controlled through two contactors (Forward and Reverse) and a thermal overload relay.  
